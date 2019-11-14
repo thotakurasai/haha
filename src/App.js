@@ -14,7 +14,7 @@ class App extends React.Component{
     this.state={
       postinf:[]
     };
-    // this.click = this.click.bind(this);
+    this.click = this.click.bind(this);
   }
   // componentDidMount(){
   //   axios.get('https://jsonplaceholder.typicode.com/users')
@@ -25,7 +25,7 @@ class App extends React.Component{
   // console.log(error);
   // })
   // } 
-  componentDidMount(){
+  click(){
     axios.get('https://jsonplaceholder.typicode.com/posts')
     .then(res => {
     this.setState({postinf:res.data})
@@ -92,30 +92,9 @@ class App extends React.Component{
                 GET SENTIMENT
                 
             </Button>
+            <div>
             
-            
-
-
-        {/* <h1>{this.state.postinfo.id}</h1> */}
-        {/* {
-          this.posts_data.map((post) => {
-              return(
-                  <div key={post.title}>
-                      <p>{post.id}</p>
-                      <p>{post.body}</p>
-                  </div>
-              )
-          })
-      } */}
-                
-                  
-            
-        </div>
-      click(){
-        
-          <div>
-            render = { () => <Posts posts_data = {this.state.postinf} /> }
-                {/* {
+                 {
                 this.state.postinf.map((post) => {
                     return(
                         <div key={post.title}>
@@ -124,12 +103,11 @@ class App extends React.Component{
                         </div>
                     )
                 })
-            } */}
+              }
             </div>
-
-        
-      }  
-      </div>
+            
+          </div>
+          </div>
 
       
 
